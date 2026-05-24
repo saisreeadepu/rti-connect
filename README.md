@@ -58,13 +58,13 @@ npm install
 ## ▶️ Run Frontend
 
 ```bash
-npm run dev
+npm start
 ```
 
 ## ▶️ Run Backend
 
 ```bash
-npm start
+node server.js
 ```
 
 ## 🌐 Deployment
