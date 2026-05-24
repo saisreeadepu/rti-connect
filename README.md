@@ -15,7 +15,6 @@ RTI-CONNECT is a MERN Stack web application designed to help users access RTI (R
 
 ### Frontend
 - React.js
-- Vite
 - CSS / Tailwind
 
 ### Backend
@@ -23,7 +22,7 @@ RTI-CONNECT is a MERN Stack web application designed to help users access RTI (R
 - Express.js
 
 ### Database
-- MongoDB Atlas
+- MongoDB Compass
 
 ## 📂 Project Structure
 
