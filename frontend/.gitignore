@@ -2,12 +2,13 @@
 
 # dependencies
  node_modules
+ .env
+ dist
+ build
 /.pnp
 .pnp.js
 .pnp.debug.js
-.env
-dist
-build
+
 
 # testing
 /coverage
