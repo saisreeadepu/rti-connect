@@ -1,0 +1,249 @@
+.system-settings-page {
+  padding: 2rem 0;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-title svg {
+  color: var(--primary-color);
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Settings Container */
+.settings-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.settings-sidebar {
+  background: var(--light-color);
+  padding: 1.5rem 0;
+  border-right: 1px solid var(--border-color);
+}
+
+.settings-tab {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.settings-tab:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+}
+
+.settings-tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.settings-tab svg {
+  font-size: 1.25rem;
+}
+
+/* Main Content */
+.settings-content {
+  padding: 2rem;
+}
+
+.settings-section {
+  max-width: 600px;
+}
+
+.settings-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.settings-group {
+  margin-bottom: 2rem;
+}
+
+.settings-group h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.input-with-icon input {
+  padding-left: 2.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* Color Picker */
+.color-picker {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-picker input[type="color"] {
+  width: 50px;
+  height: 40px;
+  padding: 0;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-actions button {
+  min-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .settings-tab {
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+  }
+
+  .settings-content {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-content {
+    padding: 1rem;
+  }
+
+  .color-picker {
+    flex-direction: column;
+  }
+
+  .color-picker input[type="color"] {
+    width: 100%;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}

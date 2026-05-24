@@ -1,0 +1,370 @@
+.pio-requests-page {
+  padding: 2rem 0;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Filters Section */
+.filters-section {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 2;
+  min-width: 300px;
+  position: relative;
+}
+
+.search-box form {
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  z-index: 1;
+}
+
+.search-box input {
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.filter-group {
+  position: relative;
+  flex: 1;
+}
+
+.filter-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  z-index: 1;
+}
+
+.filter-group select {
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+/* Requests Table */
+.requests-table-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.requests-table th {
+  background: var(--light-color);
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.requests-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.requests-table tr:hover td {
+  background: var(--light-color);
+}
+
+.requests-table tr.overdue-row {
+  background: #fff5f5;
+}
+
+.requests-table tr.overdue-row:hover td {
+  background: #fee2e2;
+}
+
+/* Request ID */
+.request-id {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: #dbeafe;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Citizen Info */
+.citizen-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.citizen-icon {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.citizen-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.125rem;
+}
+
+.citizen-phone {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Subject Cell */
+.subject-cell {
+  max-width: 300px;
+}
+
+.subject-text {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.submitted-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Deadline Cell */
+.deadline-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deadline-date {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.deadline-days {
+  font-size: 0.75rem;
+}
+
+.overdue-text {
+  color: var(--danger-color);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.days-left {
+  color: var(--warning-color);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Action Buttons */
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+.page-info {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.pagination button {
+  min-width: 100px;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .filters-section {
+    flex-direction: column;
+  }
+
+  .search-box,
+  .filter-options {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filter-options {
+    flex-direction: column;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-header button {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+
+  .pagination button {
+    width: 100%;
+  }
+}

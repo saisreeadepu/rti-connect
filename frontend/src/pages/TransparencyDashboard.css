@@ -1,0 +1,20 @@
+.transparency-page {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.transparency-page .page-header {
+  margin-bottom: 3rem;
+}
+
+.transparency-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .transparency-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
